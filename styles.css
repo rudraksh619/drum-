@@ -80,3 +80,9 @@ background-image: url('images/crash.png');
   margin: 10px;
   background-color: white;
 }
+
+.animation{
+  box-shadow: 0px 3px 4px rgb(206, 196, 255);
+  opacity: 0.5;
+  
+}

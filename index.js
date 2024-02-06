@@ -11,12 +11,16 @@ for(var i=0;i<limit;i++)
         var tune="sounds/"+which+".mp3";
         var audio=new Audio(tune);
         audio.play();
+        Animation(which);
     })
 }
 
 function makesound(key)
 {
     
+    Animation(key)
+
+
     switch(key){
        
         case "w":
@@ -75,3 +79,13 @@ document.addEventListener("keypress",function(event)
    console.log(event);
     makesound(event.key);
 })
+
+function Animation(key)
+{
+    document.querySelector("."+key).classList.add("animation");
+    setTimeout(function()
+{
+    document.querySelector("."+key).classList.remove("animation");
+},100);
+}
+
